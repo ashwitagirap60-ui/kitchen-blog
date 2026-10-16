@@ -15,18 +15,19 @@
   text-align: center;
 }
 
-.recipe-card{
-background-color:white ;
-padding: 25px;
-border: 1px solid;
-border-color: #ddd;
-border-radius: 14px;
-width: 280px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-min-height: 180px;
-display: flex;
-flex-direction: column;
-transition: transform 0.3s;
+
+.recipe-card {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  width: 320px;
+  max-width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s;
 }
 
 body{
@@ -47,10 +48,14 @@ button{
 }
 
  
-.recipe-card p {
+
+.recipe-card p,
+.recipe-card .recipe-details {
   font-size: 15px;
   line-height: 1.5;
+  text-align: justify;
 }
+
 
  .nav-menu{
   display: flex;
@@ -215,3 +220,405 @@ button{
   margin: 0;
   font-size: 14px;
 }
+
+
+/* Admin Dashboard */
+.admin-dashboard {
+  max-width: 900px;
+  width: calc(100% - 32px);
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #fffaf5;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(92, 64, 51, 0.12);
+}
+
+.admin-dashboard h2 {
+  text-align: center;
+  color: #5C4033;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.admin-dashboard h3 {
+  color: #5C4033;
+  margin-bottom: 15px;
+}
+
+/* Search box */
+.admin-dashboard input {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  margin: 15px 0 20px;
+  border: 1px solid #e3b99c;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: white;
+}
+
+.admin-dashboard input:focus {
+  outline: 2px solid #FF9F7F;
+  border-color: #FF9F7F;
+}
+
+/* Customer cards */
+.customer-card {
+  background-color: white;
+  border: 1px solid #f0d8c2;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 15px 0;
+  box-shadow: 0 2px 7px rgba(92, 64, 51, 0.08);
+  overflow-wrap: anywhere;
+}
+
+.customer-card p {
+  color: #5C4033;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.customer-card hr {
+  display: none;
+}
+
+/* Delete button */
+.customer-card button {
+  background-color: #c0392b;
+  color: white;
+  margin-top: 12px;
+}
+
+.customer-card button:hover {
+  background-color: #922b21;
+}
+
+/* Logout button */
+.admin-dashboard > button {
+  display: block;
+  margin: 25px auto 0;
+  padding: 12px 25px;
+  background-color: #5C4033;
+  color: white;
+}
+
+.admin-dashboard > button:hover {
+  background-color: #7b5545;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 16px;
+    margin: 15px auto;
+  }
+
+  .admin-dashboard h2 {
+    font-size: 24px;
+  }
+
+  .customer-card {
+    padding: 14px;
+  }
+}
+
+
+/* Admin Login Page */
+.admin-login {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(92, 64, 51, 0.15);
+  text-align: center;
+}
+
+.admin-login h2 {
+  color: #5C4033;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.admin-login input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #e3b99c;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.admin-login input:focus {
+  outline: 2px solid #FF9F7F;
+  border-color: #FF9F7F;
+}
+
+.admin-login button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5C4033;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-login button:hover {
+  background-color: #7b5545;
+}
+
+@media (max-width: 480px) {
+  .admin-login {
+    width: calc(100% - 60px);
+    margin: 30px auto;
+    padding: 20px;
+  }
+}
+
+
+/* Customer Dashboard */
+.customer-dashboard {
+  max-width: 700px;
+  width: calc(100% - 32px);
+  margin: 35px auto;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(92, 64, 51, 0.12);
+}
+
+.customer-dashboard h2 {
+  text-align: center;
+  color: #5C4033;
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.customer-dashboard h3 {
+  color: #5C4033;
+  margin-top: 20px;
+}
+
+.customer-dashboard p {
+  color: #5C4033;
+  padding: 10px 12px;
+  margin: 8px 0;
+  background-color: #fff2e8;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.customer-dashboard input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #e3b99c;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.customer-dashboard input:focus {
+  outline: 2px solid #FF9F7F;
+  border-color: #FF9F7F;
+}
+
+.customer-dashboard button {
+  padding: 11px 18px;
+  margin: 8px 8px 8px 0;
+  background-color: #5C4033;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.customer-dashboard button:hover {
+  background-color: #7b5545;
+}
+
+@media (max-width: 480px) {
+  .customer-dashboard {
+    margin: 20px auto;
+    padding: 16px;
+  }
+
+  .customer-dashboard h2 {
+    font-size: 24px;
+  }
+
+  .customer-dashboard button {
+    margin-right: 5px;
+  }
+}
+
+
+/* Customer Login Page */
+.customer-login {
+  max-width: 400px;
+  width: calc(100% - 32px);
+  margin: 50px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background-color: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(92, 64, 51, 0.15);
+  text-align: center;
+}
+
+.customer-login h2 {
+  color: #5C4033;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.customer-login h3 {
+  color: #5C4033;
+}
+
+.customer-login input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #e3b99c;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.customer-login input:focus {
+  outline: 2px solid #FF9F7F;
+  border-color: #FF9F7F;
+}
+
+.customer-login button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #5C4033;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.customer-login button:hover {
+  background-color: #7b5545;
+}
+
+.customer-login p {
+  color: #5C4033;
+  margin-top: 18px;
+}
+
+.customer-login span {
+  color: #a0522d !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.customer-login span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .customer-login {
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  .customer-login h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* Customer Registration Page */
+.customer-registration {
+  max-width: 420px;
+  width: calc(100% - 32px);
+  margin: 40px auto;
+  padding: 28px;
+  box-sizing: border-box;
+  background-color: #fffaf5;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(92, 64, 51, 0.15);
+  text-align: center;
+}
+
+.customer-registration h2 {
+  color: #5C4033;
+  font-size: 27px;
+  margin-bottom: 25px;
+}
+
+.customer-registration input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin-bottom: 17px;
+  border: 1px solid #e3b99c;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.customer-registration input:focus {
+  outline: 2px solid #FF9F7F;
+  border-color: #FF9F7F;
+}
+
+.customer-registration button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #5C4033;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.customer-registration button:hover {
+  background-color: #7b5545;
+}
+
+@media (max-width: 480px) {
+  .customer-registration {
+    margin: 25px auto;
+    padding: 20px;
+  }
+
+  .customer-registration h2 {
+    font-size: 23px;
+  }
+}
+
+
+/* Recipe Search Box */
+input[placeholder*="Search"] {
+  width: 400px;
+  max-width: 90%;
+  padding: 14px 16px;
+  font-size: 17px;
+  border: 1px solid #e3b99c;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+

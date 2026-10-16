@@ -14,7 +14,7 @@ function RecipeCard(props){
         <img src={props.image} alt={props.title} />
         <h3>{props.title}</h3>
         <p>{props.description}</p>
-        {recipeVisible && props.recipe}
+        {recipeVisible && <p className="recipe-details">{props.recipe}</p>}
         <button onClick={handleClick}>{recipeVisible ? "Hide Recipe" : "View Recipe"}</button>
         </div>
     );
